@@ -36,6 +36,7 @@ public class Categoria implements Serializable{
 		this.nome = nome;
 		this.descricao = descricao;
 	}
+	
 
 	public Categoria() {
 	}
