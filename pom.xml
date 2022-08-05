@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.jeffe</groupId>
-	<artifactId>livraria-api</artifactId>
+	<artifactId>livraria</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>livraria-api</name>
-	<description>Projeto  Spring Boot Angular 11</description>
+	<name>livraria</name>
+	<description>Projeto Spring Boot Angular 11</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
