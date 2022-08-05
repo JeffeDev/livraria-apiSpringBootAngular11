@@ -1,4 +1,4 @@
-package br.com.jeffe.bookstore;
+package br.com.jeffe.livraria;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
