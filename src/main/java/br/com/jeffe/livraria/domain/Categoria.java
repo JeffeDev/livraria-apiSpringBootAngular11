@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Categoria {
 	private Long id;
 	private String nome;
-	private String Descricao;
+	private String descricao;
 	
 	private List<Livro> livros = new ArrayList<>();
 
@@ -15,15 +15,17 @@ public class Categoria {
 		super();
 		this.id = id;
 		this.nome = nome;
-		Descricao = descricao;
+		this.descricao = descricao;
 		this.livros = livros;
 	}
 
-	public Categoria(String nome, String descricao, List<Livro> livros) {
+	public Categoria(String nome, String descricao) {
 		super();
 		this.nome = nome;
-		Descricao = descricao;
-		this.livros = livros;
+		this.descricao = descricao;
+	}
+
+	public Categoria() {
 	}
 
 	public Long getId() {
@@ -35,7 +37,7 @@ public class Categoria {
 	}
 
 	public String getDescricao() {
-		return Descricao;
+		return descricao;
 	}
 
 	public List<Livro> getLivros() {
