@@ -34,7 +34,7 @@ public class CategoriaController {
 		return ResponseEntity.ok().body(objCategoria);
 	}
 	
-	@GetMapping("/categorias")
+	@GetMapping
 	public List<CategoriaDTO> lista(){
 		List<Categoria> categoria = categoriaService.findAll();
 		return CategoriaDTO.converter(categoria);
@@ -46,8 +46,13 @@ public class CategoriaController {
 		categoriaService.save(categoria);
 		
 		URI uri = uriBuilder.path("/categoria/{id}").buildAndExpand(categoria.getId()).toUri();
-		
 		return ResponseEntity.created(uri).body(new CategoriaDTO(categoria));
+	}
+
+	@PostMapping("/{id}")
+	public ResponseEntity<CategoriaDTO> alterarCategoria(@PathVariable Long id, @RequestBody @Valid CategoriaFormDTO objDTO){
+		Categoria updateObj = categoriaService.update(id, objDTO);
+		return ResponseEntity.ok().body(new CategoriaDTO(updateObj));
 	}
 	
 }

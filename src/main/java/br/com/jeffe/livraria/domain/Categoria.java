@@ -11,9 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import lombok.Getter;
+import lombok.Data;
 
-@Entity @Getter
+@Entity @Data
 public class Categoria implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

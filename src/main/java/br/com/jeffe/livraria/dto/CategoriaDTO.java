@@ -7,9 +7,8 @@ import java.util.stream.Collectors;
 import br.com.jeffe.livraria.domain.Categoria;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 
-@Data @Getter @AllArgsConstructor
+@Data @AllArgsConstructor
 public class CategoriaDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
