@@ -136,6 +136,18 @@ http:localhost:8080/categoria/1
 
 
 
+### DELETE Categoria 
+
+Retorna 204 se for bem sucedido.
+
+````
+
+http:localhost:8080/categoria/3
+
+````
+
+
+
 ## 📒 Conteúdos  
 
 **BackEnd**: [Consumir API](https://github.com/JeffeDev)
