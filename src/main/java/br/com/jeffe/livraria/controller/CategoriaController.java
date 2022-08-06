@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -53,6 +54,12 @@ public class CategoriaController {
 	public ResponseEntity<CategoriaDTO> alterarCategoria(@PathVariable Long id, @RequestBody @Valid CategoriaFormDTO objDTO){
 		Categoria updateObj = categoriaService.update(id, objDTO);
 		return ResponseEntity.ok().body(new CategoriaDTO(updateObj));
+	}
+	
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> deletarCategoria(@PathVariable Long id){
+		categoriaService.delete(id);
+		return ResponseEntity.noContent().build();
 	}
 	
 }

@@ -32,11 +32,16 @@ public class CategoriaService {
 		categoriaRepository.save(categoria);
 	}
 
-	public Categoria update(Long id, @Valid CategoriaFormDTO formApi) {
-		Categoria obj = (findById(id));
-		obj.setNome(formApi.getNome());
-		obj.setDescricao(formApi.getDescricao());
-		return categoriaRepository.save(obj);
+	public Categoria update(Long id, @Valid CategoriaFormDTO categoriaAlterada) {
+		Categoria efetuarAlteracaoNovosDados = (findById(id));
+		efetuarAlteracaoNovosDados.setNome(categoriaAlterada.getNome());
+		efetuarAlteracaoNovosDados.setDescricao(categoriaAlterada.getDescricao());
+		return categoriaRepository.save(efetuarAlteracaoNovosDados);
+	}
+
+	public void delete(Long id) {
+		findById(id);
+		categoriaRepository.deleteById(id);
 	}
 
 
