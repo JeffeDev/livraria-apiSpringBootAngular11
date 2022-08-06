@@ -1,4 +1,4 @@
-package br.com.jeffe.livraria.resources;
+package br.com.jeffe.livraria.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,7 @@ import br.com.jeffe.livraria.services.CategoriaService;
 
 @RestController
 @RequestMapping("/categoria")
-public class CategoriaResource {
+public class CategoriaController {
 	
 	@Autowired
 	private CategoriaService categoriaService;

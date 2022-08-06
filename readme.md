@@ -33,9 +33,13 @@ Diagrama de Classes
 ![Diagrama de Classe Categoria](ModelagemDeDados/DiagramaDeClasseCategoriaProjetoLivrariaAPI.jpg)
 
 
-#### Consulta Categoria com id=1     /categoria/1
+#### Consulta Categoria com id=1     
+
 
 ````
+
+http://localhost:8080/categoria/1
+
 {
 	"id": 1,
 	"nome": "Informática",
@@ -60,7 +64,13 @@ Diagrama de Classes
 
 #### Consulta com id não encontrado
 
+
+
 ````
+
+http://localhost:8080/categoria/5
+
+
 	{
 		"timestamp": 1659762666474,
 		"status": 404,
