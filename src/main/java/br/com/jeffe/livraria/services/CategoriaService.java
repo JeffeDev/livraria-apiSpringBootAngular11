@@ -25,5 +25,9 @@ public class CategoriaService {
 		return categoriaRepository.findAll();
 	}
 
+	public void save(Categoria categoria) {
+		categoriaRepository.save(categoria);
+	}
+
 
 }

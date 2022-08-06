@@ -26,7 +26,6 @@ public class Categoria implements Serializable{
 	private List<Livro> livros = new ArrayList<>();
 
 	public Categoria(Long id, String nome, String descricao, List<Livro> livros) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
@@ -34,11 +33,9 @@ public class Categoria implements Serializable{
 	}
 
 	public Categoria(String nome, String descricao) {
-		super();
 		this.nome = nome;
 		this.descricao = descricao;
 	}
-	
 
 	public Categoria() {
 	}

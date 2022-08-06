@@ -98,6 +98,22 @@ http://localhost:8080/categorias
 
 ````
 
+### POST Categoria Retorna 201 e o item cadastrado com novo ID.
+
+````
+
+http:localhost:8080/categoria
+
+{
+    "id": 3,
+    "nome": "Engenharia",
+    "descricao": "Engenharia de Requisitos"
+}
+
+
+````
+
+
 
 ## 📒 Conteúdos  
 
