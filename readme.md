@@ -58,6 +58,18 @@ Diagrama de Classes
 
 ````
 
+#### Consulta com id não encontrado
+
+````
+	{
+		"timestamp": 1659762666474,
+		"status": 404,
+		"message": "Objeto não encontrada Id=5, Tipo: br.com.jeffe.livraria.domain.Categoria"
+	}
+
+````
+
+
 
 ## 📒 Conteúdos  
 
