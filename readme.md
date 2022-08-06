@@ -144,6 +144,19 @@ Retorna 204 se for bem sucedido.
 
 http:localhost:8080/categoria/3
 
+Se não haver nenhum livro relacionado com esta categoria, excluirá normalmente,
+
+
+Porém se existir algum livro relacionado, retorna uma exception:
+
+http:localhost:8080/categoria/2
+
+{
+    "timestamp": 1659818316595,
+    "status": 400,
+    "message": "Categoria contém Livros Assossiados, não pode ser excluída"
+}
+
 ````
 
 

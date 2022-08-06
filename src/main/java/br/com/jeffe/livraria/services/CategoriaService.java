@@ -6,6 +6,7 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import br.com.jeffe.livraria.domain.Categoria;
@@ -41,7 +42,12 @@ public class CategoriaService {
 
 	public void delete(Long id) {
 		findById(id);
-		categoriaRepository.deleteById(id);
+		try {
+			categoriaRepository.deleteById(id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DataIntegrityViolationException("Categoria contém Livros Assossiados, não pode ser excluída");
+		}
+		
 	}
 
 
