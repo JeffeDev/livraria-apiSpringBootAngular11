@@ -11,7 +11,6 @@
 
 - GET 
 	
-
 - POST 
 
 - PATCH 
@@ -33,8 +32,8 @@ Diagrama de Classes
 ![Diagrama de Classe Categoria](ModelagemDeDados/DiagramaDeClasseCategoriaProjetoLivrariaAPI.jpg)
 
 
-#### Consulta Categoria com id=1     
 
+#### Consulta Categoria com id=1     
 
 ````
 
@@ -62,9 +61,9 @@ http://localhost:8080/categoria/1
 
 ````
 
+
+
 #### Consulta com id não encontrado
-
-
 
 ````
 
@@ -79,6 +78,25 @@ http://localhost:8080/categoria/5
 
 ````
 
+
+###  Get Todas Categorias  findAll() Padrão DTO
+
+````
+
+http://localhost:8080/categorias
+
+    {
+        "id": 1,
+        "nome": "Informática",
+        "descricao": "Livros de TI"
+    },
+    {
+        "id": 2,
+        "nome": "Auto-ajuda",
+        "descricao": "Livros de Auto-Ajuda"
+    }
+
+````
 
 
 ## 📒 Conteúdos  

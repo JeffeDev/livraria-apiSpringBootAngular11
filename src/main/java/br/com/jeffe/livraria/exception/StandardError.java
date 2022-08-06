@@ -1,4 +1,4 @@
-package br.com.jeffe.livraria.resources.exception;
+package br.com.jeffe.livraria.exception;
 
 public class StandardError {
 		private Long timestamp;

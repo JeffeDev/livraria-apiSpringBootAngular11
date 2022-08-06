@@ -1,5 +1,7 @@
 package br.com.jeffe.livraria.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.jeffe.livraria.domain.Categoria;
+import br.com.jeffe.livraria.dto.CategoriaDTO;
 import br.com.jeffe.livraria.services.CategoriaService;
+
 
 @RestController
 @RequestMapping("/categoria")
@@ -21,6 +25,12 @@ public class CategoriaController {
 	public ResponseEntity<Categoria> pesquisarPorId(@PathVariable Long id) {
 		Categoria objCategoria = categoriaService.findById(id);
 		return ResponseEntity.ok().body(objCategoria);
+	}
+	
+	@GetMapping("/categorias")
+	public List<CategoriaDTO> lista(){
+		List<Categoria> categoria = categoriaService.findAll();
+		return CategoriaDTO.converter(categoria);
 	}
 	
 }

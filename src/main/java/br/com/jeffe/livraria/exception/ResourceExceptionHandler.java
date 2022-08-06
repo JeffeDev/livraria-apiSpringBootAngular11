@@ -1,4 +1,4 @@
-package br.com.jeffe.livraria.resources.exception;
+package br.com.jeffe.livraria.exception;
 
 import javax.servlet.ServletRequest;
 
