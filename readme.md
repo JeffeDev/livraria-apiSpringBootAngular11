@@ -33,8 +33,28 @@ Diagrama de Classes
 ![Diagrama de Classe Categoria](ModelagemDeDados/DiagramaDeClasseCategoriaProjetoLivrariaAPI.jpg)
 
 
-#### 
+#### Consulta Categoria com id=1     /categoria/1
+
 ````
+{
+	"id": 1,
+	"nome": "Informática",
+	"descricao": "Livros de TI",
+	"livros": [
+			{
+				"id": 1,
+				"titulo": "Microsserviços",
+				"nomeAutor": "Susan J. Fowler",
+				"texto": "Construindo sistemas padronizados em uma organização de engenharia de Softwares"
+			},
+			{
+				"id": 3,
+				"titulo": "Java",
+				"nomeAutor": "Pedro Silveira",
+				"texto": "Conheça as novidades do Java 8 e as novas versões do Java"
+			}
+	]
+}
 
 ````
 
