@@ -12,7 +12,9 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Entity
+import lombok.Getter;
+
+@Entity @Getter
 public class Livro implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -46,26 +48,6 @@ public class Livro implements Serializable{
 	public Livro() {
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public String getNomeAutor() {
-		return nomeAutor;
-	}
-
-	public String getTexto() {
-		return texto;
-	}
-
-	public Categoria getCategoria() {
-		return categoria;
-	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -82,7 +64,5 @@ public class Livro implements Serializable{
 		Livro other = (Livro) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
 	
 }

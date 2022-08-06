@@ -11,7 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-@Entity
+import lombok.Getter;
+
+@Entity @Getter
 public class Categoria implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -41,22 +43,6 @@ public class Categoria implements Serializable{
 	public Categoria() {
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public List<Livro> getLivros() {
-		return livros;
-	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -73,7 +59,6 @@ public class Categoria implements Serializable{
 		Categoria other = (Categoria) obj;
 		return Objects.equals(id, other.id);
 	}
-
 	
 }
 

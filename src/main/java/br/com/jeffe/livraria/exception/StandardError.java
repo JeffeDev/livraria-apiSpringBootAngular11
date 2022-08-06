@@ -1,5 +1,9 @@
 package br.com.jeffe.livraria.exception;
 
+import lombok.Data;
+import lombok.Getter;
+
+@Data @Getter
 public class StandardError {
 		private Long timestamp;
 		private Integer status;
@@ -12,19 +16,4 @@ public class StandardError {
 			this.message = message;
 		}
 
-		public StandardError() {
-		}
-
-		public Long getTimestamp() {
-			return timestamp;
-		}
-
-		public Integer getStatus() {
-			return status;
-		}
-
-		public String getMessage() {
-			return message;
-		}
-		
 }

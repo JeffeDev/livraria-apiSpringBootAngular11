@@ -5,7 +5,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import br.com.jeffe.livraria.domain.Categoria;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
 
+@Data @Getter @AllArgsConstructor
 public class CategoriaDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -19,37 +23,8 @@ public class CategoriaDTO implements Serializable{
 		this.descricao = obj.getDescricao();
 	}
 
-	public CategoriaDTO() {
-		super();
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	
 	public static List<CategoriaDTO> converter(List<Categoria> categoria) {
 		return categoria.stream().map(CategoriaDTO::new).collect(Collectors.toList());
 	}
-	
 	
 }
