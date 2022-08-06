@@ -2,6 +2,8 @@ package br.com.jeffe.livraria.services;
 
 import java.util.Arrays;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +18,11 @@ public class DBServices {
 	@Autowired
 	private CategoriaReposotory categoriaRepository;
 	
-	@Autowired
+	@Autowired	
 	private LivroReposotory livroRepository;
-	
-	public void instanciaBaseDeDadosTeste() {
+
+	public void instanciaBaseDeDados() {
+		
 		Categoria categoriaTI = new Categoria( "Informática", "Livros de TI");
 		Categoria categoriaAutoAjuda = new Categoria( "Auto-ajuda", "Livros de Auto-Ajuda");
 		
